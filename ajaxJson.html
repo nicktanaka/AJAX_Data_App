@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vehicle Price Finder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="ajaxJson.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h2>Enter your vehicle information</h2>
+            <br/>
+            <div>
+                <div id="carMake" class="control-group">
+                    <label for="make">Make</label>
+                    <input type="text" name="make" id="make" placeholder="Type the make of your car" /> </div>
+                <br>
+                <div id="carModel" class="control-group">
+                    <label for="model">Model</label>
+                    <input type="text" name="model" id="model" placeholder="Type the model of your car" /> </div>
+                <br>
+                <div id="carYear" class="control-group">
+                    <label for="year">Year</label>
+                    <input type="text" name="year" id="year" placeholder="Type the year of your car" /> </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <button class='btn btn-success btn-large' onclick="findMake('make'); findModel('model'); findYear('year');">Find Your Car</button>
+        </div>
+        <br />
+        <div>
+            <div id="car" class=""></div>
+        </div>
+    </center>
+</body>
+
+</html>
