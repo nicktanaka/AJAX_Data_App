@@ -5,6 +5,8 @@
 function findMake(make) {
     // First get the zip code from the HTML textbox
     var make = document.getElementById(make).value;
+    var model = document.getElementById(model).value;
+    var year = document.getElementById(year).value;
     // Now make a HTTP request
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function () {
@@ -24,7 +26,7 @@ function findMake(make) {
         }
     };
     // Notice how the URL is appended with the zip code
-    var url = "https://api.edmunds.com/api/vehicle/v2/" + make + "/" + model + "/years?fmt=json&year=" + year + "&api_key={api key}";
+    var url = "https://api.edmunds.com/api/vehicle/v2/" + make + "/" + model + "/years?fmt=json&year=" + year +  "&api_key=um6rcmcsyjx3yyyxwfhp6grb";
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
