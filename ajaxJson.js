@@ -20,12 +20,8 @@ var date = document.getElementById("date").value;
             // Waiting for a response...
         }
     };
-<<<<<<< HEAD
+
  var url = "https://api.sunrise-sunset.org/json?lat=" + latitude + "&" + "lng=" + longitude + "&" + "date=" + date;
-=======
-    // Notice how the URL is appended with the zip code
-    var url = "https://api.edmunds.com/api/vehicle/v2/grade/" + make + "/" +model+"/" + year + "?submodel" + submodel + "&fmt=json&api_key=" + api key;
->>>>>>> origin/master
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
