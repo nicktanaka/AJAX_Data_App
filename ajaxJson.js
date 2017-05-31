@@ -52,3 +52,4 @@ function errorCheck() {
         document.getElementById("sun").innerHTML = "Invalid inputs. Please enter a valid latitude and longitude and be sure that the date is entered in the correct format.";
     else {}
     }
+}
