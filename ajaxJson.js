@@ -26,7 +26,7 @@ function findMake(make) {
         }
     };
     // Notice how the URL is appended with the zip code
-    var url = "https://api.edmunds.com/api/vehicle/v2/" + make + "/" + model + "/years?fmt=json&year=" + year +  "&api_key=um6rcmcsyjx3yyyxwfhp6grb";
+    var url = "https://api.edmunds.com/api/vehicle/v2/grade/" + make + "/" +model+"/" + year + "?submodel" + submodel + "&fmt=json&api_key=" + api key;
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
