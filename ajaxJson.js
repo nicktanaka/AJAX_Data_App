@@ -30,8 +30,14 @@ function sunriseSunset() {
 
 function displaySun(data) {
     var sun = JSON.parse(data);
-    document.getElementById("sun").className = "alert alert-success";
-    document.getElementById("sun").innerHTML = "Sunrise: " + sun.results.sunrise + " Sunset: " + sun.results.sunset;
+    if (sun.results.sunrise === "none" || sun.results.sunrise === "none") {
+        document.getElementById("sun").className = "alert alert-warning";
+        document.getElementById("sun").innerHTML = "No data could be found."
+    }
+    else {
+        document.getElementById("sun").className = "alert alert-success";
+        document.getElementById("sun").innerHTML = "Sunrise: " + sun.results.sunrise + "     " + "Sunset: " + sun.results.sunset;
+    }
     errorCheck();
 }
 
@@ -47,9 +53,9 @@ function errorCheck() {
         document.getElementById("sun").className = "alert alert-warning";
         document.getElementById("sun").innerHTML = "Invalid inputs. Please enter a valid latitude and longitude and be sure that the date is entered in the correct format.";
     }
-    else if (date.indexOf("-") != 4 || date.indexOf("-") != 7) {
+    else if (date.indexOf("-") != 4 && date.indexOf("-") != 7) {
         document.getElementById("sun").className = "alert alert-warning";
         document.getElementById("sun").innerHTML = "Invalid inputs. Please enter a valid latitude and longitude and be sure that the date is entered in the correct format.";
-    else {}
     }
+    else {}
 }
