@@ -26,11 +26,21 @@ function findMake(make) {
         }
     };
     // Notice how the URL is appended with the zip code
-    var url = "https://api.edmunds.com/api/vehicle/v2/grade/" + make + "/" +model+"/" + year + "?submodel" + submodel + "&fmt=json&api_key=" + api key;
+    var url = "https://api.edmunds.com/api/vehicle/v2/grade/" + make + "/" + model + "/" + year + "?submodel" + submodel + "&fmt=json&api_key=" + "um6rcmcsyjx3yyyxwfhp6grb";
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
 
+function searchString(data) {
+    var wordLocation = data.search("price");
+    var startIndex = wordLocation + 7
+     for (i= startIndex; i < 10; i++) {
+         if (data.charAt(i) == ","){
+             var endIndex = i;
+             return data.slice(startIndex, endIndex);
+         }
+     }
+}
 /**
  * Displays the zip code place given the JSON data
  * @param {string} data JSON data representing place for given zip code
